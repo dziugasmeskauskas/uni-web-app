@@ -2,5 +2,7 @@
 
 ## Install
 
-`yarn`
-`yarn start`
+- Install mongodb
+
+- `yarn`
+- `yarn start`

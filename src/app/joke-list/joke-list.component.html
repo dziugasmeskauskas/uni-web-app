@@ -1,0 +1,15 @@
+<div class="joke-container">
+  <ng-container *ngFor="let joke of jokeList">
+    <div class="card" [ngClass]="joke.open ? 'flipped' : ''" >
+      <a class="action action__delete" (click)="deleteJoke(joke)"></a>
+      <a class="action action__edit" [routerLink]="[joke._id]" ></a>
+      <div class="front" (click)="joke.open = !joke.open">{{joke.setup}}</div>
+      <div class="back" (click)="joke.open = !joke.open">{{joke.punchline}}</div>
+    </div>
+  </ng-container>
+</div>
+
+<a class="createJoke" routerLink="/createjoke">
+  New
+  <small>Joke</small>
+</a>

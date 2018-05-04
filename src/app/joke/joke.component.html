@@ -1,0 +1,11 @@
+<h1>Joke</h1>
+
+<form #editJoke="ngForm" *ngIf="joke" (submit)="submitForm(joke, $event)">
+  <label for="">Setup</label>
+  <textarea id="" cols="30" rows="5" [(ngModel)]="joke.setup" required id="setup" name="setup" #setup="ngModel"></textarea>
+  <label for="">Punchline</label>
+  <textarea id="" cols="30" rows="5"[(ngModel)]="joke.punchline" required id="punchline" name="punchline" #punchline="ngModel"></textarea>
+  <label for="">Type</label>
+  <input type="text" [(ngModel)]="joke.type" required id="type" name="type" #type="ngModel">
+  <input type="submit" [attr.disabled]="!editJoke.valid  ? '' : null "  value="save">
+</form>

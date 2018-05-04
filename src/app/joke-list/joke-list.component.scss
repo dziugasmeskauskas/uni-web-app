@@ -1,0 +1,102 @@
+.card {
+  width: 300px;
+  margin-bottom: 5%;
+  margin-right: 5%;
+  height: 180px;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: -webkit-transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 6px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  background-color: #fff;
+  float: left;
+}
+
+.card div {
+  position: absolute;
+  width: 300px;
+  height: 180px;
+  backface-visibility: hidden;
+  border-radius: 6px;
+  display: flex;
+  font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #47525d;
+  background: #fff;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.card .back {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  background: #fff;
+}
+
+.card.flipped {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  background-color: transparent;
+  .action {
+    display: none;
+  }
+}
+
+.joke-container {
+  display: inline;
+}
+
+.action {
+  width: 15px;
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  background-repeat: no-repeat;
+  z-index: 10;
+  cursor: pointer;
+
+  &__edit {
+    background-image: url('../../assets/images/edit.svg');
+    right: 10px;
+  }
+  &__delete {
+    background-image: url('../../assets/images/garbage.svg');
+    left: 10px;
+  }
+
+}
+
+.createJoke {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: white;
+  position: fixed;
+  right: 20px;
+  bottom: 50px;
+  box-shadow: 4px 4px 20px 1px rgba(0,0, 0, 0.2);
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 22px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.1s linear;
+
+  &:hover {
+    text-decoration: none;
+    font-weight: 400;
+    box-shadow: 4px 4px 20px 1px rgba(0,0, 0, 0.7);
+    transition: all 0.1s linear;
+  }
+
+  small {
+    font-size: 16px;
+  }
+}

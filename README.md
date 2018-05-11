@@ -13,10 +13,11 @@
 ## Entity requirements
 - Entity should have a name written in camelCase
 - Entity should have 3 mandatory attributes:
-    - `id` - string
-    - `type` - string
-    - `setup` - string
-    - `punchline` - string
+    - `id` - `required|unique|unsigned|string(11)`
+    - `type` - `nullable|unsigned|string|max:255|`
+    - `setup` - `nullable|unsigned|string|max:255|`
+    - `punchline` - `nullable|unsigned|string|max:255|`
+    - `createDate` - `date`
 
 ## REST API requirements
 - The api has 4 methods:

@@ -34,16 +34,17 @@ function getJokes() {
       var jokes = JSON.parse(body);
       var data = mapJokes(jokes);
       insertJokes(data);
-
     }
   });
 };
 
 function mapJokes (jokes) {
+  const now = new Date().toISOString();
   return jokes.map(joke => ({
     type: joke.type,
     setup: joke.setup,
-    punchline: joke.punchline
+    punchline: joke.punchline,
+    createDate: now
   }));
 }
 

@@ -24,6 +24,6 @@
     - `GET` - `/jokes` returns all jokes
     - `GET` - `/jokes/:id` return one joke by id
     - `POST` - `/jokes` adds a joke
-    - `PUT` - `/joke/:id` updates the joke
-    - `DELETE` - `/joke/:id` deletes the joke
+    - `PUT` - `/jokes/:id` updates the joke
+    - `DELETE` - `/jokes/:id` deletes the joke
 

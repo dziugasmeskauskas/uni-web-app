@@ -6,3 +6,23 @@
 
 - `yarn`
 - `yarn start`
+
+
+
+# Web system requirements
+## Entity requirements
+- Entity should have a name written in camelCase
+- Entity should have 3 mandatory attributes:
+    - `id` - string
+    - `type` - string
+    - `setup` - string
+    - `punchline` - string
+
+## REST API requirements
+- The api has 4 methods:
+    - `GET` - `/jokes` returns all jokes
+    - `GET` - `/jokes/:id` return one joke by id
+    - `POST` - `/jokes` adds a joke
+    - `PUT` - `/joke/:id` updates the joke
+    - `DELETE` - `/joke/:id` deletes the joke
+
